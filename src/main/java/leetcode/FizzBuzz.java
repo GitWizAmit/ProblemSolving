@@ -1,8 +1,6 @@
 package main.java.leetcode;
 
-import java.util.function.IntConsumer;
-
-class FizzBuzz {
+public class FizzBuzz {
     private final int n;
     private int currentNumber = 1;
 
@@ -62,3 +60,4 @@ class FizzBuzz {
         }
     }
 }
+
