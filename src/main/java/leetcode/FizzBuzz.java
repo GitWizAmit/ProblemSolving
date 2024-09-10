@@ -1,5 +1,7 @@
 package main.java.leetcode;
 
+import java.util.function.IntConsumer;
+
 public class FizzBuzz {
     private final int n;
     private int currentNumber = 1;
