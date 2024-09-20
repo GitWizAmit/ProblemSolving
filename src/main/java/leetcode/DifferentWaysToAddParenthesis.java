@@ -21,7 +21,7 @@ public class DifferentWaysToAddParenthesis {
             }
         }
 
-        if (result.size() == 0) {
+        if (result.isEmpty()) {
             result.add(Integer.parseInt(expression));
         }
         map.put(expression, result);
@@ -31,18 +31,12 @@ public class DifferentWaysToAddParenthesis {
     private void valAfterEvaluatingExpression(char ch, List<Integer> l1, List<Integer> l2, List<Integer> result) {
         for (int i1 : l1) {
             for (int i2 : l2) {
-                int val = 0;
-                switch (ch) {
-                    case '-':
-                        val = i1 - i2;
-                        break;
-                    case '+':
-                        val = i1 + i2;
-                        break;
-                    case '*':
-                        val = i1 * i2;
-                        break;
-                }
+                int val = switch (ch) {
+                    case '-' -> i1 - i2;
+                    case '+' -> i1 + i2;
+                    case '*' -> i1 * i2;
+                    default -> 0;
+                };
                 result.add(val);
             }
         }
